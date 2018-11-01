@@ -1,8 +1,8 @@
 FROM nginx:1.15
 
-MAINTAINER Karl Hughes <khughes.me@gmail.com>
+MAINTAINER Gabor Koszegi <gabor.koszegi@tert.uk>
 
-ENV DATA_DIR /var/www
+ENV DATA_DIR /var/www/html
 
 ADD start.sh /usr/local/bin/
 
