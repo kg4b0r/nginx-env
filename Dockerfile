@@ -22,9 +22,9 @@ RUN apk --no-cache add shadow && usermod -aG www-data nginx
 # http://git.alpinelinux.org/cgit/aports/tree/main/nginx-initscripts/nginx-initscripts.pre-install?h=v3.3.2
 
 # Disable daemon mode
-RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+ # echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
     # Backup configs
-    cp -a /etc/nginx/conf.d /etc/nginx/.conf.d.orig && \
+RUN    cp -a /etc/nginx/conf.d /etc/nginx/.conf.d.orig && \
     rm -f /etc/nginx/conf.d/default.conf && \
     # Make sure the data directory is created and ownership correct
     mkdir -p $DATA_DIR && \
