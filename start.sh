@@ -6,7 +6,7 @@ if [[ ! "$(ls -A /etc/nginx/conf.d)" ]]; then
 fi
 
 # Replace variables $ENV{<environment varname>}
-function ReplaceEnvironmentVariable() {
+ReplaceEnvironmentVariable() {
     grep -rl "\$ENV{\"$1\"}" $3|xargs -r \
         sed -i "s|\\\$ENV{\"$1\"}|$2|g"
 }
