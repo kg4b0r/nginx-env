@@ -4,7 +4,7 @@ MAINTAINER Gabor Koszegi <gabor.koszegi@tert.uk>
 
 ENV DATA_DIR /var/www
 
-ADD start.sh /usr/local/bin/
+ADD start.sh /usr/sbin/
 
 ADD conf /etc/nginx/conf.d/
 
@@ -29,4 +29,4 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
 
 WORKDIR /etc/nginx
 
-CMD ["/usr/local/bin/start.sh"]
+CMD ["/usr/sbin/start.sh"]
