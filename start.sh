@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Restore original default config if no config has been provided
 if [[ ! "$(ls -A /etc/nginx/conf.d)" ]]; then
