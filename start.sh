@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Restore original default config if no config has been provided
 if [[ ! "$(ls -A /etc/nginx/conf.d)" ]]; then
@@ -18,7 +18,7 @@ if [ -n "$DEBUG" ]; then
 fi
 
 # Replace all variables
-for _curVar in $(env | awk -F = '{print $1}');do
+for _curVar in `env | awk -F = '{print $1}'`;do
     # awk has split them by the equals sign
     # Pass the name and value to our function
     ReplaceEnvironmentVariable ${_curVar} ${!_curVar} /etc/nginx/conf.d/*
