@@ -8,6 +8,9 @@ ADD start.sh /usr/sbin/
 
 ADD conf /etc/nginx/conf.d/
 
+# adding bash :)
+RUN apk add bash
+
 # ensure www-data user exists
 RUN set -x ; \
   addgroup -g 82 -S www-data ; \
